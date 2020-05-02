@@ -7,9 +7,11 @@
     {% if name %}
         <h1> Hello {{ name }} </h1>
 
+        <h3>Details: </h3>
         <ul>
         {% for user in users %}
-            <li> {{user}} </li>
+            <li> nickname: {{user.nickname}} </li>
+            <li> age: {{user.age}} </li>
         {% endfor %}
         </ul>
 

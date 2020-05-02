@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import User
+
 
 # Create your views here.
 def home(request):
@@ -8,7 +10,11 @@ def home(request):
     #     <h1> Good Python </h1>
     # """
     # return HttpResponse(response)
-    return render(request, 'users/home.html', {})
+    context = {
+        'name': 'Aries',
+        'users': User.objects.all(),
+    }
+    return render(request, 'users/home.html', context)
 
     
 
