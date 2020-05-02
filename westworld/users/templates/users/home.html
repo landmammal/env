@@ -1,0 +1,20 @@
+{% extends 'users/layout.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+    {% if name %}
+        <h1> Hello {{ name }} </h1>
+
+        <ul>
+        {% for user in users %}
+            <li> {{user}} </li>
+        {% endfor %}
+        </ul>
+
+    {% else %}
+        <h1> Hello, Darkness my old friend </h1>
+    {% endif %}
+
+{% endblock  %}
