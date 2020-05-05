@@ -4,15 +4,13 @@
 
 {% block content %}
 
-    {% if name %}
-        <h1> Hello {{ name }} </h1>
+    {% if user %}
+        <h1> Hello {{ user.name }} </h1>
 
         <h3>Details: </h3>
-        <ul>
-        {% for user in users %}
+        <ul>        
             <li> nickname: {{user.nickname}} </li>
-            <li> age: {{user.age}} </li>
-        {% endfor %}
+            <li> age: {{user.age}} </li>        
         </ul>
 
     {% else %}
