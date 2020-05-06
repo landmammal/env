@@ -1,0 +1,25 @@
+{% extends 'users/layout.html' %}
+
+{% block title %} Index {% endblock %}
+
+{% block content %}
+
+
+
+    {% for user in object_list %}
+        
+        <h1> Hello {{ user.name }} </h1>
+
+        <h3>Details: </h3>
+
+        <ul>        
+            <li> nickname: {{user.nickname}} </li>
+            <li> age: {{user.age}} </li>        
+        </ul>
+    
+    {% endfor %}
+
+<p>{{ power_level }}</p>
+
+
+{% endblock  %}
